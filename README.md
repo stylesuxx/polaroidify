@@ -1,4 +1,4 @@
-polaroid-stack-jquery-plugin
+Polaroidify
 ============================
-
-jQuery Polaroid Stack Plugin
+Check the projects page for more information.
+http://stylesuxx.github.com/polaroidify/
