@@ -115,6 +115,33 @@
   $('#polaroid-stack').polaroidify();
 &lt;/script&gt;
 </code></pre>
+<p>The selection may may a single item by <span style="font-weight: bold;">id</span> or a <span style="font-weight: bold;">class</span> with multiple items - if you want to use the same parameters on multiple stacks on a single page.</p>	
+
+<h3>HTML Structure</h3>
+<p>You can use any kind of parent-child structure:</p>
+<pre><code>&lt;parent&gt;
+  &lt;child 1 /&gt;
+  &lt;child 2 /&gt;
+  &lt;child 3 /&gt;
+
+  &lt;child n /&gt;
+&lt;/parent&gt;
+</pre></code>
+<p>For divs it would look like this:</p>
+<pre><code>&lt;div&gt;
+  &lt;div&gt;Pic 1&lt;/div&gt;
+  &lt;div&gt;Pic 2&lt;/div&gt;
+  &lt;div&gt;Pic 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>But it is also possible to use lists:</p>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;Pic 1&lt;/li&gt;
+  &lt;li&gt;Pic 2&lt;/li&gt;
+  &lt;li&gt;Pic 3&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
 
 <h3>Parameters</h3>
 <p>The plugin is highly customizable, here is a parameter overview, what they do and their default values:</p>
