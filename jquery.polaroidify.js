@@ -47,10 +47,10 @@
     }
     
     return this.each(function(){
-      // Select the pics and rotate them
+      // Select the  elements children rotation
       // TODO: add rotation for old IE's
     
-      $pics = $(this).children('.pic');
+      $pics = $(this).children();
       prefixes = ['', '-moz-', '-o-', '-webkit-'];
     
       $pics.each(function(){
@@ -73,7 +73,7 @@
     
     // Slide the polaroids
     function move($div, wait, waitOffset, trans, transOffset, animMap){
-      var $last = $div.children('.pic:last').delay(getRandom(wait, waitOffset));
+      var $last = $div.children(':last').delay(getRandom(wait, waitOffset));
       var transTime = getRandom(trans, transOffset);
 		
       $last.animate(animMap, transTime, function(){
