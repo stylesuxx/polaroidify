@@ -11,6 +11,8 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/script.js"></script>
 
+  <script type="text/javascript" src="https://raw.github.com/stylesuxx/polaroidify/master/jquery.polaroidify.js"></script>
+
   <title>Polaroidify</title>
   <meta name="description" content="jQuery Polaroid Stack Plugin">
 
@@ -39,7 +41,23 @@
           <h3>What?</h3>
 <p>Description what the Plugin does</p>
 
-<h3>Examples</h3>
+<h3>Demo</h3>
+<div id="demo-container">
+  <div id="fotostack-demo" class="polaroids" direction="up" wait="2000" waitOffset="0" transition="1200" transitionOffset="0" deg="0" degOffset="15" slide="130">
+    <div class="pic">
+      <div class="image image-1"></div>
+      <div class="pic-unterschrift">Bild 1</div>
+    </div>
+    <div class="pic">
+      <div class="image image-2"></div>
+      <div class="pic-unterschrift">Bild 2</div>
+    </div>
+    <div class="pic">
+      <div class="image image-3"></div>
+      <div class="pic-unterschrift">Bild 3</div>
+    </div>
+  </div>
+</div>
 
 <p>Here is an example, I hope jQuery and js do work on these pages?
 No does not seem to be working, maybe link to own page,...</p>
@@ -86,6 +104,16 @@ If you're using the GitHub for Mac, simply sync your repository and you'll see t
     <p class="name"></p>
   </div>
 
-  
+  <script>
+    $('#fotostack-demo').polaroidify({
+      'deg': -30,
+      'degOffset': 15,
+      'direction': 'left down',
+      'slide': 200,
+      'trans': 1000,
+      'wait': 1000,
+      'navigation': true
+    });
+  </script>
 </body>
 </html>
