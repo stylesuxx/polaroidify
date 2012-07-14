@@ -29,28 +29,6 @@
     background-color: red;
 }
 
-#container,
-#container-1,
-#container-2,
-#container-3{
-    margin-bottom: 40px;
-}
-
-#container,
-#container-2{
-    float:left;
-}
-
-#container-1,
-#container-3{
-    padding-left: 200px;
-}
-
-#container-2,
-#container-3{
-    padding-top: 100px;
-}
-
 .pic-unterschrift{
     text-align: center;
     width: 100%;

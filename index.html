@@ -39,12 +39,14 @@
         <span class="blc"></span><span class="trc"></span>
         </div>
         <article class="markdown-body">
-          <h3>What?</h3>
-<p>Description what the Plugin does</p>
+          <h3>About</h3>
+<p>Polaroidify is a jQuery plugin that rotates through divs just like if they were a stack of polaroids.</p>
 
-<h3>Demo</h3>
+<h3>Demos</h3>
+<p>Since a picture, or in this case an animation says more than a thousand words, here are some demos including the parameters used.</p>
+<h4>Demo 1</h4>
 <div id="demo-container">
-  <div id="fotostack-demo" class="polaroids" direction="up" wait="2000" waitOffset="0" transition="1200" transitionOffset="0" deg="0" degOffset="15" slide="130">
+  <div id="fotostack-demo-1" class="polaroids" direction="up" wait="2000" waitOffset="0" transition="1200" transitionOffset="0" deg="0" degOffset="15" slide="130">
     <div class="pic">
       <div class="image image-1"></div>
       <div class="pic-unterschrift">Bild 1</div>
@@ -59,32 +61,96 @@
     </div>
   </div>
 </div>
+<pre><code>&lt;script&gt;
+  $('#fotostack-demo-1').polaroidify({
+    'deg': -30,
+    'degOffset': 15,
+    'direction': 'right',
+    'slide': 200,
+    'trans': 1000,
+    'wait': 1000
+  });
+&lt;/script&gt;
+</code></pre>
 
-<p>Here is an example, I hope jQuery and js do work on these pages?
-No does not seem to be working, maybe link to own page,...</p>
+<h4>Demo 2</h4>
+<div id="demo-container">
+  <div id="fotostack-demo-2" class="polaroids" direction="up" wait="2000" waitOffset="0" transition="1200" transitionOffset="0" deg="0" degOffset="15" slide="130">
+    <div class="pic">
+      <div class="image image-1"></div>
+      <div class="pic-unterschrift">Bild 1</div>
+    </div>
+    <div class="pic">
+      <div class="image image-2"></div>
+      <div class="pic-unterschrift">Bild 2</div>
+    </div>
+    <div class="pic">
+      <div class="image image-3"></div>
+      <div class="pic-unterschrift">Bild 3</div>
+    </div>
+  </div>
+</div>
+<pre><code>&lt;script&gt;
+  $('#fotostack-demo-2').polaroidify({
+    'deg': -45,
+    'degOffset': 45,
+    'direction': 'left',
+    'slide': 200,
+    'trans': 100,
+    'transOffset': 1500,
+    'waitOffset': 1500,
+    'wait': 0
+  });
+&lt;/script&gt;
+</code></pre>
+
 
 <h3>How to use</h3>
 
-<p>some explanation about how to use this plugin</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p>Just include the plugin in the header of the page you want to use it:</p>
+<pre><code>&lt;script src ="/path/to/jquery.polaroidify.js" type="text/javascript"&gt; &lt;/script&gt;
+</code></pre>
+<p>On the bottom of the page define which elements are to polaroidify and which parameters to use:</p>
+<pre><code>&lt;script&gt;
+  $('#polaroid-stack').polaroidify();
+&lt;/script&gt;
 </code></pre>
 
-<h3>Download</h3>
+<h3>Parameters</h3>
+<p>The plugin is highly customizable, here is a parameter overview, what they do and their default values:</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Function</th><th>Values</th><th>Default</th></tr>
+</thead>
+<tbody>
+<tr><td>deg</td><td>The stacks base rotation in degrees.</td><td>-360..360</td><td>0</td></tr>
+<tr><td>degOffset</td><td>Random offset for a single pic in degrees. Gets added to the base rotation.</td><td>-360..360</td><td>10</td></tr>
+<tr><td>wait</td><td>Wait time in ms before the next rotation.</td><td>0..</td><td>5000</td></tr>
+<tr><td>waitOffset</td><td>Random wait offset in ms. Is added to wait</td><td>0..</td><td>0</td></tr>
+<tr><td>trans</td><td>The time in ms how long a transition takes in one direction.</td><td>0..</td><td>1500</td></tr>
+<tr><td>transOffset</td><td>Random transition time offset. Is added to transOffset.</td><td>0..</td><td>0</td></tr>
+<tr><td>slide</td><td>How far from the stack the pictures get slided in px.</td><td>0..</td><td>500</td></tr>
+<tr><td>direction</td><td>The direction in which the pictures should slide.</td><td>right, left, up, down, left up, left down, right up, right down</td><td>right</td></tr>
+</tbody>
+</table>
+<p>Parameters which you will most likely change are <span style="font-style: italic;">deg</span> for the <span style="font-weight: bold;">base rotation</span>, <span style="font-style: italic;">slide</span> for the <span style="font-weight: bold;">amount of pixels to slide</span> and <span style="font-style: italic;">direction</span> of course for the <span style="font-weight: bold;">direction</span> you want to slide. Feel free to play with the other parameters in order to give your animation a special touch.</p>
 
-<p>Link to the donload files</p>
+
+<h3>Download</h3>
+<p>You can clone the gitHub repo:</p>
+<pre><code>git clone https://github.com/stylesuxx/polaroidify.git</code></pre>
+<p>or grab a package:</p>
+<ul>
+<li><a href="https://github.com/stylesuxx/polaroidify/zipball/master">stable ZIP</a></li>
+<li><a href="https://github.com/stylesuxx/polaroidify/tarball/master">stable tarball</a></li>
+</ul>
 
 <h3>Support / Bugs / Features</h3>
-
-<p>If you have ound any Bugs feel free to submit them to the .
-In case you have any problems using this plugin or think that it is missing a feature, feel free to drop me a line: chris[-at-]1337[-dot-]af</p>
+<p>If you have found any Bugs, need general support or think that a feature is missing, feel free to submit to the <a href="https://github.com/stylesuxx/polaroidify/issues">Issue tracker</a>.<br/>In case you want to contact me personaly drop me a line at: chris[-at-]1337[-dot-]af</p>
 
 <h3>Author</h3>
 
-<p>Polaroidify was build by Chris Landa and was initially used for this page 
-If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Polaroidify was build by Chris Landa and was initially used for the <a href="#">Modul Universit&auml;t's FaceBook page</a>.</p>
         </article>
       </div>
     </div>
@@ -106,7 +172,7 @@ If you're using the GitHub for Mac, simply sync your repository and you'll see t
   </div>
 
   <script>
-    $('#fotostack-demo').polaroidify({
+    $('#fotostack-demo-1').polaroidify({
       'deg': -30,
       'degOffset': 15,
       'direction': 'right',
@@ -114,6 +180,16 @@ If you're using the GitHub for Mac, simply sync your repository and you'll see t
       'trans': 1000,
       'wait': 1000,
       'navigation': true
+    });
+    $('#fotostack-demo-2').polaroidify({
+      'deg': -45,
+      'degOffset': 45,
+      'direction': 'left',
+      'slide': 200,
+      'trans': 100,
+      'transOffset': 1500,
+      'waitOffset': 1500,
+      'wait': 0
     });
   </script>
 </body>
