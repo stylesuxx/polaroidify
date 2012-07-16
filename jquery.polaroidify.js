@@ -48,10 +48,10 @@
     
     return this.each(function(){
       // Select the  elements children rotation
-      // TODO: add rotation for old IE's
+      // TODO: add rotation for old IE's ( < 8 )
     
       $pics = $(this).children();
-      prefixes = ['', '-moz-', '-o-', '-webkit-'];
+      prefixes = ['', '-moz-', '-o-', '-webkit-', '-ms-'];
     
       $pics.each(function(){
 	var $pic = $(this);
