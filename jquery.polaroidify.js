@@ -22,7 +22,7 @@
       'transOffset': 0,		// Transition time offset (added randomly to trans)
       'slide': 500,		// The amount of which the polaroid slides
       'direction': 'right',	// The direction to slide the polaroid
-      'navigation': false
+      'navigation': false	// TODO: Add Navigation
     }, options);
     
     // Set the CSS animation map depending on the given direction
@@ -46,10 +46,9 @@
 	settings['animMap'] = {marginLeft: settings['slide']}; break;           
     }
     
-    return this.each(function(){
-      // Select the  elements children rotation
-      // TODO: add rotation for old IE's ( < 8 )
-    
+    // Rotate all children of all parentes
+    // TODO: add rotation for old IE's ( < 8 )
+    return this.each(function(){    
       $pics = $(this).children();
       prefixes = ['', '-moz-', '-o-', '-webkit-', '-ms-'];
     
@@ -89,5 +88,6 @@
 	});
       });
     }
+    
   };
 })(jQuery, jQuery);
